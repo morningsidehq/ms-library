@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATALOG - MORNINGSIDE LIBRARY INFORMATION SYSTEM</title>
+    <link rel="icon" type="image/png" href="morningsidelibrary-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>MORNINGSIDE LIBRARY INFORMATION SYSTEM</h1>
+            <nav>
+                <a href="index.html">SYSTEM INDEX</a>
+                <a href="catalog.html">CATALOG ACCESS</a>
+                <a href="#">OPERATIONS</a>
+                <a href="#">SPECIFICATIONS</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="search-section">
+            <h2>CATALOG SEARCH INTERFACE</h2>
+            <input type="text" class="search-input" placeholder="ENTER SEARCH PARAMETERS..." id="catalogSearch">
+            <button class="search-button" id="searchButton">EXECUTE SEARCH</button>
+        </section>
+
+        <section>
+            <h2>DOCUMENT CATALOG</h2>
+            <div id="catalogEntries">
+                <!-- Entries will be populated by JavaScript -->
+                <div class="loading-indicator">LOADING CATALOG DATA...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>MORNINGSIDE LIBRARY TECHNICAL INFORMATION SYSTEM [REV.2024.1]</p>
+            <p>
+                <a href="#">SYSTEM DOCUMENTATION</a> | 
+                <a href="#">ACCESS CONTROL</a> | 
+                <a href="#">OPERATOR MANUAL</a>
+            </p>
+        </div>
+    </footer>
+    <script src="scripts/catalog.js"></script>
+</body>
+</html> 

@@ -1,0 +1,210 @@
+/* Base styles */
+body {
+    font-family: 'Source Serif Pro', 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    line-height: 1.5;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 30px;
+    background-color: white;
+    box-shadow: none;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Source Serif Pro', 'Courier New', monospace;
+    margin-bottom: 1rem;
+    letter-spacing: 0;
+    font-weight: 600;
+}
+
+h1 { font-size: 24px; }
+h2 { font-size: 20px; }
+h3 { font-size: 18px; }
+
+/* Header */
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 25px 0;
+    border-bottom: 2px solid #000000;
+}
+
+header .container {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+nav {
+    border-top: 1px solid #000;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #000000;
+    margin-right: 40px;
+    font-family: 'Source Serif Pro', monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 60px 0;
+}
+
+.search-section {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    background-color: transparent;
+    padding: 30px;
+    border: 1px solid #000;
+}
+
+.search-input {
+    width: calc(100% - 150px);
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #000;
+    background-color: #fff;
+    margin-right: 10px;
+    font-family: 'Courier New', monospace;
+}
+
+.search-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+.search-button:hover {
+    background-color: #000;
+    color: #fff;
+    transform: none;
+}
+
+/* Featured Item */
+.featured-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+.featured-image {
+    margin-right: 20px;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #000;
+}
+
+.metadata {
+    font-family: 'Courier New', monospace;
+    line-height: 1.6;
+    color: #000;
+    font-size: 14px;
+    border-left: 1px solid #000;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: transparent;
+    padding: 20px 0;
+    margin-top: 40px;
+    border-top: 2px solid #000;
+    font-size: 12px;
+    color: #000;
+    font-family: 'Courier New', monospace;
+}
+
+footer .container {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/* Technical Specifications */
+.technical-specs {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.technical-specs td, .technical-specs th {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Links */
+a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+}
+
+a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Catalog Specific Styles */
+.loading-indicator {
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #000;
+    margin: 20px 0;
+}
+
+.error-message {
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #000;
+    margin: 20px 0;
+    background-color: #fff;
+    color: #000;
+}
+
+#catalogEntries .featured-item {
+    margin-bottom: 30px;
+}
+
+#catalogEntries .featured-item:last-child {
+    margin-bottom: 0;
+}

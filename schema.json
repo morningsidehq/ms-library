@@ -1,0 +1,157 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Archival Asset",
+  "description": "Schema for archival assets in the Morningside Library Technical Information System",
+  "type": "object",
+  "required": [
+    "id",
+    "msoid",
+    "title",
+    "classification",
+    "dateRange",
+    "accessLevel"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the asset"
+    },
+    "msoid": {
+      "type": "string",
+      "description": "Morningside Library Object Identifier",
+      "pattern": "^[0-9]{6}$"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the asset"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to access the digital asset"
+    },
+    "thumbnailUrl": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the asset thumbnail"
+    },
+    "classification": {
+      "type": "string",
+      "description": "Asset classification category"
+    },
+    "documentSet": {
+      "type": "string",
+      "description": "Name of the document set this asset belongs to"
+    },
+    "dateRange": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "string",
+          "format": "date"
+        },
+        "end": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": ["start", "end"]
+    },
+    "medium": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Physical medium types"
+    },
+    "provenance": {
+      "type": "string",
+      "description": "Origin and history of the asset"
+    },
+    "condition": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["EXCELLENT", "GOOD", "FAIR", "POOR"]
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "required": ["status"]
+    },
+    "digitization": {
+      "type": "object",
+      "properties": {
+        "equipment": {
+          "type": "string"
+        },
+        "date": {
+          "type": "object",
+          "properties": {
+            "start": {
+              "type": "string",
+              "format": "date"
+            },
+            "end": {
+              "type": "string",
+              "format": "date"
+            }
+          },
+          "required": ["start", "end"]
+        },
+        "operator": {
+          "type": "string"
+        },
+        "format": {
+          "type": "string"
+        }
+      },
+      "required": ["equipment", "date", "operator", "format"]
+    },
+    "storage": {
+      "type": "object",
+      "properties": {
+        "physical": {
+          "type": "object",
+          "properties": {
+            "location": {
+              "type": "string"
+            },
+            "container": {
+              "type": "string"
+            }
+          },
+          "required": ["location", "container"]
+        },
+        "digital": {
+          "type": "object",
+          "properties": {
+            "size": {
+              "type": "string"
+            },
+            "checksum": {
+              "type": "string"
+            }
+          },
+          "required": ["size", "checksum"]
+        }
+      },
+      "required": ["physical", "digital"]
+    },
+    "preservationStatus": {
+      "type": "string",
+      "enum": ["ACTIVE", "INACTIVE", "PENDING"]
+    },
+    "accessLevel": {
+      "type": "string",
+      "enum": ["UNRESTRICTED", "RESTRICTED", "CLASSIFIED"]
+    },
+    "lastModified": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of last modification"
+    }
+  }
+} 
